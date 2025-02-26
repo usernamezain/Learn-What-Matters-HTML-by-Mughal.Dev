@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Semantic HTML & Best Practices</title>
+    <style>
+        /* Consistent Chapter 1 styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #2c3e50;
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 2rem;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0;
+        }
+
+        .semantic-example {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #3498db;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-container">
+        <h1>Chapter 7: Semantic HTML Essentials</h1>
+
+        <h2>Why Semantic HTML Matters</h2>
+        <div class="note">
+            <strong>Key Benefits:</strong>
+            <ul>
+                <li>Improved accessibility</li>
+                <li>Better SEO rankings</li>
+                <li>Easier code maintenance</li>
+                <li>Enhanced device compatibility</li>
+            </ul>
+        </div>
+
+        <h2>Core Semantic Tags</h2>
+        <div class="code-block">
+            <pre><code>&lt;header&gt;Site header&lt;/header&gt;
+&lt;nav&gt;Main navigation&lt;/nav&gt;
+&lt;main&gt;Primary content&lt;/main&gt;
+&lt;article&gt;Self-contained content&lt;/article&gt;
+&lt;section&gt;Thematic grouping&lt;/section&gt;
+&lt;aside&gt;Related content&lt;/aside&gt;
+&lt;footer&gt;Page footer&lt;/footer&gt;</code></pre>
+        </div>
+
+        <h2>Semantic Document Structure</h2>
+        <div class="semantic-example">
+            <pre><code>&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Website Title&lt;/h1&gt;
+        &lt;nav&gt;...&lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+            &lt;section&gt;
+                &lt;h3&gt;Chapter 1&lt;/h3&gt;
+                &lt;p&gt;Content...&lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/article&gt;
+        
+        &lt;aside&gt;
+            &lt;h2&gt;Related Posts&lt;/h2&gt;
+            &lt;ul&gt;...&lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;Copyright information&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+
+        <h2>Accessibility Landmarks</h2>
+        <div class="code-block">
+            <pre><code>&lt;div role="banner"&gt;Header content&lt;/div&gt;
+&lt;div role="navigation"&gt;Nav links&lt;/div&gt;
+&lt;div role="main"&gt;Primary content&lt;/div&gt;
+&lt;div role="complementary"&gt;Sidebar&lt;/div&gt;
+&lt;div role="contentinfo"&gt;Footer content&lt;/div&gt;</code></pre>
+        </div>
+
+        <h2>Semantic Text Elements</h2>
+        <div class="code-block">
+            <pre><code>&lt;time datetime="2023-09-01"&gt;September 1st&lt;/time&gt;
+&lt;address&gt;Contact information&lt;/address&gt;
+&lt;blockquote cite="source"&gt;Quote text&lt;/blockquote&gt;
+&lt;figure&gt;
+    &lt;img src="chart.jpg" alt="Sales chart"&gt;
+    &lt;figcaption&gt;Monthly sales data&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </div>
+
+        <h2>Microdata & SEO</h2>
+        <div class="code-block">
+            <pre><code>&lt;div itemscope itemtype="https://schema.org/Person"&gt;
+    &lt;span itemprop="name"&gt;John Doe&lt;/span&gt;
+    &lt;span itemprop="jobTitle"&gt;Web Developer&lt;/span&gt;
+    &lt;a itemprop="email" href="mailto:john@example.com"&gt;Email&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="note">
+            <strong>Schema.org Types:</strong>
+            <ul>
+                <li>Article</li>
+                <li>LocalBusiness</li>
+                <li>Product</li>
+                <li>Event</li>
+                <li>Recipe</li>
+            </ul>
+        </div>
+
+        <h2>Common Semantic Mistakes</h2>
+        <div class="warning">
+            <strong>Avoid:</strong>
+            <ul>
+                <li>Using div for everything</li>
+                <li>Multiple main elements</li>
+                <li>Empty heading tags</li>
+                <li>Incorrect nesting (e.g., header inside section)</li>
+            </ul>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="page6.html" class="btn btn-primary">← Previous Chapter</a>
+            <a href="page7addition.html" class="btn btn-primary">Next Chapter →</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Chapter: Complete HTML5 Reference</title>
+    <style>
+        /* Consistent Chapter Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #2c3e50;
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 2rem;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0;
+        }
+
+        .example-box {
+            border: 2px solid #3498db;
+            padding: 1rem;
+            margin: 2rem 0;
+            background: white;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #3498db;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-container">
+        <h1>Complete HTML5 Mastery</h1>
+
+        <!-- Section 1: Meta & SEO -->
+        <h2>1. Meta Tags & SEO Essentials</h2>
+        <div class="note">
+            <strong>Purpose:</strong> Control page metadata & search engine behavior
+        </div>
+
+        <div class="code-block">
+            <pre><code>&lt;!-- Essential Meta Tags --&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Page description"&gt;
+
+&lt;!-- Open Graph (Social Media) --&gt;
+&lt;meta property="og:title" content="Page Title"&gt;
+&lt;meta property="og:image" content="image.jpg"&gt;</code></pre>
+        </div>
+
+        <!-- Section 2: Head Elements -->
+        <h2>2. Head Section Elements</h2>
+        <div class="code-block">
+            <pre><code>&lt;title&gt;Page Title&lt;/title&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;
+&lt;script src="script.js" defer&gt;&lt;/script&gt;
+&lt;style&gt;
+    /* In-page CSS */
+&lt;/style&gt;</code></pre>
+        </div>
+
+        <!-- Section 3: HTML Entities -->
+        <h2>3. Special Characters & Symbols</h2>
+        <div class="example-box">
+            <p>Copyright: &copy; | Trademark: &trade; | Euro: &euro;</p>
+            <p>Arrow: → | Emoji: &#128512; | Math: ∑ (∑)</p>
+        </div>
+        <div class="code-block">
+            <pre><code>&amp;copy;   &amp;trade;   &amp;#128512;   &amp;sum;</code></pre>
+        </div>
+
+        <!-- Section 4: Advanced Embedding -->
+        <h2>4. Embedding External Content</h2>
+        <div class="code-block">
+            <pre><code>&lt;iframe 
+    src="https://maps.google.com/maps?q=new+york" 
+    title="NYC Map" 
+    loading="lazy"
+&gt;&lt;/iframe&gt;
+
+&lt;embed type="video/webm" src="video.mp4" width="400"&gt;</code></pre>
+        </div>
+
+        <!-- Section 5: HTML5 APIs -->
+        <h2>5. HTML5 Native Features</h2>
+        <div class="code-block">
+            <pre><code>&lt;!-- Geolocation --&gt;
+&lt;div id="location"&gt;&lt;/div&gt;
+
+&lt;!-- Local Storage --&gt;
+&lt;script&gt;
+localStorage.setItem('key', 'value');
+&lt;/script&gt;
+
+&lt;!-- Canvas --&gt;
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code></pre>
+        </div>
+
+        <!-- Section 6: Internationalization -->
+        <h2>6. Global Content Support</h2>
+        <div class="code-block">
+            <pre><code>&lt;html lang="ar" dir="rtl"&gt; &lt;!-- Arabic --&gt;
+&lt;bdi&gt;مرحبا&lt;/bdi&gt; &lt;!-- Bi-directional isolation --&gt;
+
+&lt;ruby&gt;
+    漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;</code></pre>
+        </div>
+
+        <!-- Section 7: Best Practices -->
+        <h2>7. Professional HTML Guidelines</h2>
+        <div class="note">
+            <strong>Essential Rules:</strong>
+            <ul>
+                <li>Always validate HTML (W3C Validator)</li>
+                <li>Use semantic elements first</li>
+                <li>Keep nesting under 5 levels</li>
+                <li>Add alt text to all images</li>
+            </ul>
+        </div>
+
+        <!-- Section 8: Deprecated Tags -->
+        <h2>8. Outdated Elements to Avoid</h2>
+        <div class="code-block">
+            <pre><code>&lt;!-- Deprecated --&gt;
+&lt;font face="arial"&gt;Text&lt;/font&gt;
+&lt;center&gt;Content&lt;/center&gt;
+&lt;marquee&gt;Scrolling&lt;/marquee&gt;
+
+&lt;!-- Modern Alternatives --&gt;
+&lt;div style="text-align: center"&gt;Content&lt;/div&gt;
+&lt;span style="font-family: arial"&gt;Text&lt;/span&gt;</code></pre>
+        </div>
+
+        <!-- Section 9: Advanced Elements -->
+        <h2>9. Specialized HTML5 Tags</h2>
+        <div class="code-block">
+            <pre><code>&lt;details&gt;
+    &lt;summary&gt;Read More&lt;/summary&gt;
+    Hidden content
+&lt;/details&gt;
+
+&lt;dialog open&gt;
+    &lt;p&gt;Popup content&lt;/p&gt;
+&lt;/dialog&gt;
+
+&lt;template&gt;
+    &lt;div&gt;Reusable content&lt;/div&gt;
+&lt;/template&gt;</code></pre>
+        </div>
+
+        <!-- Section 10: Final Checklist -->
+        <h2>10. HTML5 Feature Checklist</h2>
+        <div class="note">
+            <strong>Must-Know Features:</strong>
+            <ul>
+                <li>Semantic elements (header, nav, article)</li>
+                <li>Form validation attributes</li>
+                <li>Audio/Video embedding</li>
+                <li>Canvas/SVG graphics</li>
+                <li>Web Storage APIs</li>
+                <li>Responsive image (srcset)</li>
+            </ul>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="page11.html" class="btn btn-primary">← Previous Chapter</a>
+            <span class="btn">End of HTML Series</span>
+        </div>
+    </div>
+</body>
+</html>

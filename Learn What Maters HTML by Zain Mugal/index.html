@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn What Matters HTML</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        .cover {
+            background: #2c3e50;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .book-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color:white;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ecf0f1;
+            margin-bottom: 2rem;
+        }
+
+        .author {
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        .chapter {
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #e8f4f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .code-block {
+            background: #34495e;
+            color: black;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover">
+        <h1 class="book-title">Learn What Matters HTML</h1>
+        <p class="subtitle">A Practical Guide to Essential Web Development</p>
+        <p class="author">By Zain Mughal</p>
+    </div>
+
+    <!-- Chapter 1 Content -->
+    <div class="chapter">
+        <h2>Chapter 1: Introduction to HTML</h2>
+        
+        <h3>What is HTML?</h3>
+        <p>
+            HTML (HyperText Markup Language) is the foundation of every webpage on the internet. 
+            It's not a programming language, but rather a <em>markup language</em> used to structure content 
+            on the web.
+        </p>
+
+        <h3>Basic HTML Structure</h3>
+        <p>Every HTML document follows this fundamental structure:</p>
+        
+        <div class="code-block">
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Page content --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <h3>Key Components</h3>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code> - Declares HTML5 document type</li>
+            <li><code>&lt;html&gt;</code> - Root element of the page</li>
+            <li><code>&lt;head&gt;</code> - Contains meta information</li>
+            <li><code>&lt;body&gt;</code> - Contains visible content</li>
+        </ul>
+
+        <h3>Your First Web Page</h3>
+        <p>Let's create a simple page that displays "Hello World":</p>
+
+        <div class="code-block">
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my website&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="page2.html" style="background: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+                Next Chapter →
+            </a>
+        </div>
+    </div>
+</body>
+</html>

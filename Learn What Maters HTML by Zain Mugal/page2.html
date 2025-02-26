@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: HTML Text Formatting</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #2d3436;
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 2rem;
+        }
+
+        .note {
+            background:  #e8f4f8;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0; 
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #219a52;
+        }
+
+        .text-formatting-example {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-container">
+        <h1>Chapter 2: HTML Text Formatting</h1>
+
+        <h2>Headings & Paragraphs</h2>
+        <p>HTML provides six levels of headings and paragraph tags for text organization:</p>
+        
+        <div class="code-block">
+            <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Section Heading&lt;/h3&gt;
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="note">
+            <strong>Best Practice:</strong> Use heading tags in order (h1 → h6) for accessibility and SEO.
+        </div>
+
+        <h2>Text Formatting Tags</h2>
+        <p>Essential tags for emphasizing content:</p>
+
+        <div class="text-formatting-example">
+            <p>
+                &lt;strong&gt; makes text <strong>bold and important</strong><br>
+                &lt;em&gt; adds <em>italic emphasis</em><br>
+                &lt;mark&gt; <mark>highlights text</mark><br>
+                &lt;small&gt; creates <small>smaller text</small><br>
+                &lt;del&gt; shows <del>deleted text</del><br>
+                &lt;ins&gt; indicates <ins>inserted text</ins><br>
+                &lt;sub&gt; subscript<sub>2</sub><br>
+                &lt;sup&gt; superscript<sup>3</sup>
+            </p>
+        </div>
+
+        <div class="code-block">
+            <pre><code>&lt;p&gt;
+    &lt;strong&gt;Important:&lt;/strong&gt; This is &lt;em&gt;emphasized text&lt;/em&gt;.
+    &lt;mark&gt;Highlighted content&lt;/mark&gt; and H&lt;sub&gt;2&lt;/sub&gt;O.
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <h2>Line Breaks & Horizontal Rules</h2>
+        <p>Control content flow with these self-closing tags:</p>
+
+        <div class="code-block">
+            <pre><code>&lt;p&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Section divider above&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="note">
+            <strong>Remember:</strong> &lt;br&gt; should only be used for line breaks that are actually part of the content, not for styling.
+        </div>
+
+        <h2>Preformatted Text</h2>
+        <p>Use &lt;pre&gt; tag to preserve whitespace:</p>
+
+        <div class="code-block">
+            <pre><code>&lt;pre&gt;
+    This text
+        preserves
+            spaces
+    and line breaks
+&lt;/pre&gt;</code></pre>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="page1.html" class="btn btn-primary">← Previous Chapter</a>
+            <a href="page2additional.html" class="btn btn-primary">Next Chapter →</a>
+        </div>
+    </div>
+</body>
+</html>

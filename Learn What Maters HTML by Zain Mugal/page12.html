@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering SVG</title>
+    <style>
+        /* Consistent styling */
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 2rem; 
+            background: #f0f2f5; 
+            color: #2c3e50; 
+        }
+        h1 { 
+            color: #2c3e50; 
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+        }
+        .code-block { 
+            background: #2c3e50; 
+            color: #ecf0f1; 
+            padding: 1rem; 
+            border-radius: 5px; 
+            margin: 1rem 0; 
+            overflow-x: auto;
+        }
+        svg { 
+            border: 2px solid #3498db; 
+            margin: 1rem 0;
+            background: white;
+        }
+        .note {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #3498db;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .tag-def {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG: Scalable Vector Graphics</h1>
+
+    <div class="note">
+        <strong>Why SVG Matters:</strong>
+        <ul>
+            <li>Resolution-independent graphics</li>
+            <li>Smaller file sizes for complex shapes</li>
+            <li>Accessible through DOM manipulation</li>
+            <li>Animatable and styleable with CSS</li>
+            <li>Essential for data visualization</li>
+        </ul>
+    </div>
+
+    <h2>1. Key Features</h2>
+    <div class="note">
+        <strong>When to Use SVG:</strong>
+        <ul>
+            <li>Logos & icons</li>
+            <li>Charts & graphs</li>
+            <li>Interactive maps</li>
+            <li>Complex animations</li>
+            <li>Resolution-sensitive images</li>
+        </ul>
+    </div>
+
+    <h2>2. Basic Shapes</h2>
+    <h3>Circle</h3>
+    <div class="code-block">
+        <pre><code>&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" 
+            fill="#3498db" stroke="#2c3e50" stroke-width="2"/&gt;
+&lt;/svg&gt;</code></pre>
+    </div>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+    </svg>
+
+    <h2>3. Path Element (Complex Shapes)</h2>
+    <div class="code-block">
+        <pre><code>&lt;svg width="200" height="200"&gt;
+    &lt;path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" 
+          stroke="#3498db" fill="none" stroke-width="2"/&gt;
+&lt;/svg&gt;</code></pre>
+    </div>
+    <svg width="200" height="200">
+        <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" 
+              stroke="#3498db" fill="none" stroke-width="2"/>
+    </svg>
+
+    <h2>4. Text in SVG</h2>
+    <div class="code-block">
+        <pre><code>&lt;svg width="300" height="100"&gt;
+    &lt;text x="20" y="35" font-family="Arial" font-size="20"
+          fill="#2c3e50" transform="rotate(30 20,40)"&gt;
+        Scalable Text!
+    &lt;/text&gt;
+&lt;/svg&gt;</code></pre>
+    </div>
+    <svg width="300" height="100">
+        <text x="20" y="35" font-family="Arial" font-size="20" 
+              fill="#2c3e50" transform="rotate(30 20,40)">
+            Scalable Text!
+        </text>
+    </svg>
+
+    <h2>5. SVG Animation</h2>
+    <div class="code-block">
+        <pre><code>&lt;svg width="100" height="100"&gt;
+    &lt;rect width="50" height="50" fill="#3498db"&gt;
+        &lt;animate attributeName="x" from="0" to="50" 
+                 dur="2s" repeatCount="indefinite"/&gt;
+    &lt;/rect&gt;
+&lt;/svg&gt;</code></pre>
+    </div>
+    <svg width="100" height="100">
+        <rect width="50" height="50" fill="#3498db">
+            <animate attributeName="x" from="0" to="50" 
+                     dur="2s" repeatCount="indefinite"/>
+        </rect>
+    </svg>
+
+    <h2>6. SVG vs PNG Comparison</h2>
+    <table style="width:100%; border-collapse:collapse; margin:1rem 0">
+        <tr>
+            <th style="border:1px solid #3498db; padding:8px">Feature</th>
+            <th style="border:1px solid #3498db; padding:8px">SVG</th>
+            <th style="border:1px solid #3498db; padding:8px">PNG</th>
+        </tr>
+        <tr>
+            <td style="border:1px solid #3498db; padding:8px">Scalability</td>
+            <td style="border:1px solid #3498db; padding:8px">✅ Infinite</td>
+            <td style="border:1px solid #3498db; padding:8px">❌ Pixelates</td>
+        </tr>
+        <tr>
+            <td style="border:1px solid #3498db; padding:8px">File Size</td>
+            <td style="border:1px solid #3498db; padding:8px">Small (simple)</td>
+            <td style="border:1px solid #3498db; padding:8px">Large (high-res)</td>
+        </tr>
+    </table>
+
+    <h2>7. Best Practices</h2>
+    <div class="note">
+        <strong>Pro Tips:</strong>
+        <ul>
+            <li>Optimize SVG files with tools like SVGO</li>
+            <li>Use &lt;symbol&gt; for reusable components</li>
+            <li>Prefer inline SVG for interactivity</li>
+            <li>Add aria labels for accessibility</li>
+        </ul>
+    </div>
+
+    <div class="nav-buttons">
+          <a href="exer.html" class="btn btn-primary">HTML Exercise</a>
+        <a href="summ.html" class="btn btn-primary">← Back to Summary</a>
+    </div>
+</body>
+</html>

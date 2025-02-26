@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7A: Semantic Layouts in Action</title>
+    <style>
+        /* Consistent Chapter 1 styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #2c3e50;
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 2rem;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0;
+        }
+
+        .semantic-demo {
+            border: 2px dashed #3498db;
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+
+        /* Semantic element visualization */
+        header { background: #d6eaf8; padding: 1rem; }
+        nav { background: #aed6f1; padding: 1rem; }
+        main { background: #ebf5fb; padding: 1rem; }
+        article { background: #fdedec; padding: 1rem; margin: 1rem 0; }
+        aside { background: #e8f8f5; padding: 1rem; }
+        footer { background: #d4e6f1; padding: 1rem; }
+        section { border: 1px solid #3498db; padding: 1rem; margin: 1rem 0; }
+        time { color: #2ecc71; font-weight: bold; }
+        mark { background: #f9e79f; padding: 2px 5px; }
+
+        .layout-example {
+            display: grid;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #3498db;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-container">
+        <h1>Semantic Layouts in Practice</h1>
+
+        <div class="note">
+            <strong>Visual Guide:</strong>
+            <ul>
+                <li><span style="background:#d6eaf8">Header</span></li>
+                <li><span style="background:#aed6f1">Navigation</span></li>
+                <li><span style="background:#fdedec">Article</span></li>
+                <li><span style="background:#e8f8f5">Aside</span></li>
+                <li><span style="background:#d4e6f1">Footer</span></li>
+            </ul>
+        </div>
+
+        <h2>Complete Page Layout</h2>
+        <div class="semantic-demo">
+            <header>
+                <h2>Website Header</h2>
+                <nav>
+                    <a href="/">Home</a> | 
+                    <a href="/about">About</a>
+                </nav>
+            </header>
+
+            <main>
+                <article>
+                    <header>
+                        <h3>Blog Post Title</h3>
+                        <p>Published on <time datetime="2023-09-01">September 1</time></p>
+                    </header>
+                    <section>
+                        <h4>Introduction</h4>
+                        <p>This is the main content area with <mark>highlighted text</mark>.</p>
+                    </section>
+                </article>
+
+                <aside>
+                    <h4>Related Posts</h4>
+                    <ul>
+                        <li>Previous article</li>
+                        <li>Next article</li>
+                    </ul>
+                </aside>
+            </main>
+
+            <footer>
+                <p>&copy; 2023 Your Website</p>
+            </footer>
+        </div>
+
+        <h2>Semantic Article Structure</h2>
+        <div class="code-block">
+            <pre><code>&lt;article&gt;
+    &lt;header&gt;
+        &lt;h2&gt;AI Revolution&lt;/h2&gt;
+        &lt;p&gt;By &lt;address&gt;John Doe&lt;/address&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    
+    &lt;section&gt;
+        &lt;h3&gt;Introduction&lt;/h3&gt;
+        &lt;p&gt;Current state of AI...&lt;/p&gt;
+    &lt;/section&gt;
+    
+    &lt;figure&gt;
+        &lt;img src="ai.jpg" alt="AI graphic"&gt;
+        &lt;figcaption&gt;AI technology visualization&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;Posted on &lt;time&gt;2023-09-01&lt;/time&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+
+        <h2>Semantic Text Elements</h2>
+        <div class="semantic-demo">
+            <p>
+                The &lt;mark&gt; tag <mark>highlights important text</mark>.<br>
+                Use &lt;time&gt; for dates: <time datetime="2023-09-01">Sep 1st</time>.<br>
+                &lt;cite&gt; marks <cite>The Great Gatsby</cite> as a reference.<br>
+                &lt;abbr&gt; explains <abbr title="World Health Organization">WHO</abbr> abbreviations.
+            </p>
+        </div>
+
+        <h2>Accessibility Benefits</h2>
+        <div class="note">
+            <strong>Screen Reader Output:</strong>
+            <ul>
+                <li>"Navigation landmark" for &lt;nav&gt;</li>
+                <li>"Main landmark" for &lt;main&gt;</li>
+                <li>"Article" announced for &lt;article&gt;</li>
+                <li>"Banner landmark" for &lt;header&gt;</li>
+            </ul>
+        </div>
+
+        <h2>SEO Impact Demonstration</h2>
+        <div class="layout-example">
+            <div style="border:1px solid #3498db; padding:1rem;">
+                <h3>Non-semantic Layout</h3>
+                <div class="div-layout">
+                    <div class="header">...</div>
+                    <div class="main-content">...</div>
+                </div>
+                <p>Search engines see: Generic content containers</p>
+            </div>
+
+            <div style="border:1px solid #2ecc71; padding:1rem;">
+                <h3>Semantic Layout</h3>
+                <header>...</header>
+                <main>...</main>
+                <footer>...</footer>
+                <p>Search engines see: Structured content hierarchy</p>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="page7.html" class="btn btn-primary">← Back to Chapter 7</a>
+            <a href="page8.html" class="btn btn-primary">Next Chapter →</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10: HTML Lists Mastery</title>
+    <style>
+        /* Consistent Chapter 1 styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #2c3e50;
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 2rem;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0;
+        }
+
+        .list-demo {
+            border: 2px solid #3498db;
+            padding: 1rem;
+            margin: 2rem 0;
+            background: white;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #3498db;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-container">
+        <h1>Chapter 10: Mastering HTML Lists</h1>
+
+        <div class="note">
+            <strong>Why Use Lists:</strong>
+            <ul>
+                <li>Organize related items</li>
+                <li>Improve content structure</li>
+                <li>Enhance accessibility</li>
+                <li>Better SEO ranking</li>
+            </ul>
+        </div>
+
+        <h2>1. Unordered Lists (&lt;ul&gt;)</h2>
+        <div class="list-demo">
+            <h3>Features List</h3>
+            <ul>
+                <li>24/7 Support</li>
+                <li>Free Updates</li>
+                <li>Secure Hosting</li>
+            </ul>
+        </div>
+        <div class="code-block">
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <h2>2. Ordered Lists (&lt;ol&gt;)</h2>
+        <div class="list-demo">
+            <h3>Installation Steps</h3>
+            <ol>
+                <li>Download Software</li>
+                <li>Run Installer</li>
+                <li>Complete Setup</li>
+            </ol>
+        </div>
+        <div class="code-block">
+            <pre><code>&lt;ol type="I" start="5"&gt;
+    &lt;li&gt;Step One&lt;/li&gt;
+    &lt;li&gt;Step Two&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <h2>3. Description Lists (&lt;dl&gt;)</h2>
+        <div class="list-demo">
+            <h3>Terminology</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+            </dl>
+        </div>
+        <div class="code-block">
+            <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;Definition&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+
+        <h2>4. Nested Lists</h2>
+        <div class="list-demo">
+            <h3>Table of Contents</h3>
+            <ol>
+                <li>Introduction
+                    <ul>
+                        <li>Overview</li>
+                        <li>History</li>
+                    </ul>
+                </li>
+                <li>Main Content</li>
+            </ol>
+        </div>
+        <div class="code-block">
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Chapter 1
+        &lt;ul&gt;
+            &lt;li&gt;Section 1.1&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <h2>List Attributes</h2>
+        <table style="width:100%; border-collapse:collapse; margin:1rem 0">
+            <tr>
+                <th style="border:1px solid #3498db; padding:8px">Attribute</th>
+                <th style="border:1px solid #3498db; padding:8px">Description</th>
+            </tr>
+            <tr>
+                <td style="border:1px solid #3498db; padding:8px">type</td>
+                <td style="border:1px solid #3498db; padding:8px">Bullet/number style (1, A, a, I, i)</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #3498db; padding:8px">start</td>
+                <td style="border:1px solid #3498db; padding:8px">Starting number</td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #3498db; padding:8px">reversed</td>
+                <td style="border:1px solid #3498db; padding:8px">Reverse numbering</td>
+            </tr>
+        </table>
+
+        <h2>Best Practices</h2>
+        <div class="note">
+            <strong>When to Use Which List:</strong>
+            <ul>
+                <li>Ordered: Sequential information</li>
+                <li>Unordered: Grouping related items</li>
+                <li>Description: Terms and definitions</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>Avoid:</strong>
+            <ul>
+                <li>Using lists for layout</li>
+                <li>Excessive nesting (3+ levels)</li>
+                <li>Empty list items</li>
+            </ul>
+        </div>
+
+        <h2>Real-World Example</h2>
+        <div class="list-demo">
+            <nav>
+                <ul style="list-style:none; padding:0; display:flex; gap:1rem;">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="code-block">
+            <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="page9.html" class="btn btn-primary">← Previous Chapter</a>
+            <a href="page10additional.html" class="btn btn-primary">Next Chapter →</a>
+        </div>
+    </div>
+</body>
+</html>
