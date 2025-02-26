@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn What Matters HTML - Zain Mughal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .book-3d {
+            perspective: 1000px;
+            margin: 2rem 0;
+            transform: rotateY(20deg) rotateX(10deg);
+            transition: transform 0.5s;
+        }
+
+        .book-3d:hover {
+            transform: rotateY(25deg) rotateX(15deg) translateZ(20px);
+        }
+
+        .book-cover {
+            width: 300px;
+            height: 400px;
+            background: #2c3e50;
+            border-radius: 5px 15px 15px 5px;
+            position: relative;
+            box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+        }
+
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            right: -50%;
+            width: 45%;
+            height: 100%;
+            background: #34495e;
+            transform: skewY(25deg);
+            transform-origin: left;
+            border-radius: 15px 5px 5px 15px;
+        }
+
+        .book-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .author {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .book-cover {
+                width: 200px;
+                height: 300px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .ink{
+            position: absolute;
+            bottom: 20px;
+            color:red;
+            font-family:monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Learn What Matters HTML</h1>
+        <div class="author">By Zain Mughal</div>
+        
+        <div class="book-3d">
+            <div class="book-cover">
+                <div class="book-content">
+                    <h2>HTML Essentials</h2>
+                    <p>By Zain Mughal</p>
+                </div>
+            </div>
+        </div>
+
+        <a  href="Learn What Maters HTML by Zain Mughal/index.html" class="cta-button">Start Learning Now</a>
+        <br>
+        
+        <a class="ink" href="https://whatsapp.com/channel/0029VaeAEIq77qVOrqctRg38">Join Our WhatsApp Channel 😊</a>
+    </div>
+</body>
+</html>
